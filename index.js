@@ -45,7 +45,9 @@ $(".box").click(function(){
     }
     else
     {
-      i=0;
+      if(key_pressed == true)
+      {
+        i=0;
       blink_colour(this.id);
       playSound(this.id);
       setTimeout(function(){
@@ -53,7 +55,7 @@ $(".box").click(function(){
         blink_colour(nextClick);
         playSound(nextClick);
       },1000);
-
+    }
     }
 });
 
